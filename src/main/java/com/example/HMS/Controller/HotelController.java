@@ -14,7 +14,8 @@ public class HotelController {
         this.hotelService=hotelService;
     }
     @GetMapping
-    public List<Hotel> getAllHotels(@RequestParam(value = "latitude", required = false) Double latitude, @RequestParam(value = "longitude", required = false) Double longitude) {
+    public List<Hotel> getAllHotels(@RequestParam(value = "latitude", required = false) Double latitude,
+                                    @RequestParam(value = "longitude", required = false) Double longitude) {
         return hotelService.getAllHotels(latitude,longitude);
     }
 
