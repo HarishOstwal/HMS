@@ -1,5 +1,5 @@
-package com.example.HMS.Service;
-import com.example.HMS.Model.UserT;
+package com.example.HMS.adapters.service;
+import com.example.HMS.domain.models.UserT;
 import org.jdbi.v3.core.Jdbi;
 import org.springframework.stereotype.Service;
 
@@ -41,7 +41,7 @@ public class UserService {
     }
 
     public UserT updateUser(UserT user) {
-        int numRowsAffected = jdbi.withHandle(handle -> {
+        jdbi.withHandle(handle -> {
             return handle.createUpdate("update UserT set " +
                             "user_name = :userName, " +
                             "user_email = :userEmail, " +
@@ -50,12 +50,7 @@ public class UserService {
                     .bindBean(user)
                     .execute();
         });
-
-        if (numRowsAffected > 0) {
-            return user;
-        } else {
-            return null;
-        }
+        return user;
     }
     public String deleteUser(int userId) {
         int numRowsAffected=jdbi.withHandle(handle -> {
@@ -64,8 +59,8 @@ public class UserService {
                     .execute();
         });
 
-        if(numRowsAffected>0)return "Hotel with ID " + userId + " deleted successfully.";
-        else return "Hotel with ID " + userId + " not found or couldn't be deleted.";
+        if(numRowsAffected>0)return "User with ID " + userId + " deleted successfully.";
+        else return "User with ID " + userId + " not found or couldn't be deleted.";
     }
 
     public List<Map<String,Object>>getHotelsByUserId(int userId){

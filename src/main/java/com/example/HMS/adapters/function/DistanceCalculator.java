@@ -1,6 +1,6 @@
-package com.example.HMS.Function;
+package com.example.HMS.adapters.function;
 
-import com.example.HMS.Model.Hotel;
+import com.example.HMS.domain.models.Hotel;
 import java.util.List;
 
 public class DistanceCalculator {

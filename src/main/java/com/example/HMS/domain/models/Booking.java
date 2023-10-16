@@ -1,4 +1,4 @@
-package com.example.HMS.Model;
+package com.example.HMS.domain.models;
 
 import jakarta.persistence.*;
 import lombok.Data;

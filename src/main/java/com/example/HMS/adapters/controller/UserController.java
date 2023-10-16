@@ -1,7 +1,7 @@
-package com.example.HMS.Controller;
+package com.example.HMS.adapters.controller;
 
-import com.example.HMS.Model.UserT;
-import com.example.HMS.Service.UserService;
+import com.example.HMS.domain.models.UserT;
+import com.example.HMS.adapters.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

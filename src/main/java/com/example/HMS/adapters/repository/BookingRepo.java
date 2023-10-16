@@ -1,6 +1,6 @@
-package com.example.HMS.Repository;
+package com.example.HMS.adapters.repository;
 
-import com.example.HMS.Model.Booking;
+import com.example.HMS.domain.models.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 

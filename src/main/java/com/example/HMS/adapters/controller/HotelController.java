@@ -1,6 +1,6 @@
-package com.example.HMS.Controller;
-import com.example.HMS.Model.Hotel;
-import com.example.HMS.Service.HotelService;
+package com.example.HMS.adapters.controller;
+import com.example.HMS.domain.models.Hotel;
+import com.example.HMS.adapters.service.HotelService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.*;
@@ -18,7 +18,6 @@ public class HotelController {
                                     @RequestParam(value = "longitude", required = false) Double longitude) {
         return hotelService.getAllHotels(latitude,longitude);
     }
-
     @GetMapping("/{hotelId}")
     public Hotel getHotelById(@PathVariable int hotelId) {
          return hotelService.getHotelById(hotelId);

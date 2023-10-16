@@ -1,7 +1,7 @@
-package com.example.HMS.Service;
+package com.example.HMS.adapters.service;
 
-import com.example.HMS.Function.DistanceCalculator;
-import com.example.HMS.Model.Hotel;
+import com.example.HMS.adapters.function.DistanceCalculator;
+import com.example.HMS.domain.models.Hotel;
 import org.jdbi.v3.core.Jdbi;
 import org.springframework.stereotype.Service;
 import java.util.List;
